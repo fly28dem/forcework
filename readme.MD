@@ -1,0 +1,1 @@
+The site has thematic sections containing links

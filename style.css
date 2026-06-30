@@ -1,6 +1,24 @@
+/* Сброс и шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 /* ------------------------ */
 /* -------- ОБЩИЕ --------- */
 /* ------------------------ */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    transition: 0.07s;
+}
 
 li {
     list-style-type: none;
@@ -14,15 +32,22 @@ li:hover {
 
 body {
     height: 100vh;
+    font-family: "Gentium Book Plus", serif;
     background: #383838;
     background: radial-gradient(circle, rgba(56, 56, 56, 1) 0%, rgba(26, 26, 26, 1) 100%);
 }
 
-.wrapper {
+
+/* Горизонтальный */
+.wrapper, .container {
     width: 94vw;
     display: flex;
-    align-items: center;
-    height: inherit;
+    margin: auto;
+}
+
+/* Вертикальный */
+.container {
+    flex-direction: column;
 }
 
 /* ------------------------ */
@@ -44,6 +69,8 @@ body {
 /* Верхняя часть шапки */
 
 .top-brick {
+    height: inherit;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -72,14 +99,77 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-size: 16px;
-    font-family: "Gentium Book Plus", serif;
-    color: rgb(185, 185, 185);
     background-color: rgb(12, 12, 12);
     
 }
 
 .bottom-brick {
+    height: inherit;
+    align-items: center;
+    gap: 15px;
+}
+
+.header__bottom-brick a {
+    font-size: 16px;
+    font-family: "Gentium Book Plus", serif;
+    color: rgb(185, 185, 185);
+}
+
+/* ------------------------------- */
+/* -------- Основные стили ------- */
+/* ------------------------------- */
+
+h1, h2, p {
+    color: rgb(170, 170, 170);
+}
+
+.main__header {
+    margin-top: 5vh;
+}
+
+h1 {
+    margin-bottom: 2vh;
+}
+
+h2 {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+p, a {
+    margin-bottom: 1vh;
+}
+
+a {
+    color: #E1AD00;
+}
+
+a:hover {
+    color: #e7b91f;
+}
+
+u {
+    color: rgb(77, 77, 77);;
+}
+
+.blocked {
+    color: rgb(148, 78, 78);
+    
+}
+.blocked::after {
+    content: '(Заблокировано в РФ)';
+}
+
+.works {
+    color: rgb(78, 148, 87);
+}
+.works::after {
+    content: '(Работает в РФ)';
+}
+
+/* Строка с ссылкой */
+
+.link-string {
+    display: flex;
     gap: 15px;
 }
