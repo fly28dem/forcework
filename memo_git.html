@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Force Workshop — Memo Git</title>
+    <link rel="icon" href="./icon.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__top-brick">
+            <div class="top-brick wrapper">
+                <a href="./index.html" class="header__logotype"><img src="./logoMvp3.png" alt="logo"></a>
+                <a href="./index.html" class="header__register-button"></a>
+            </div>
+        </div>
+        <nav class="header__bottom-brick">
+            <ul class="bottom-brick wrapper">
+                <li><a href="./index.html">Main page</a></li>
+                <li><a href="./web_tools.html">Web Tools</a></li>
+                <li><a href="./other_tools.html">Other Tools</a></li>
+                <li><a href="./references.html">References</a></li>
+                <li><a href="./memo_git.html">Memo Git</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="container">
+        <section class="main__header">
+            <h1>/ Памятка использования Git</h1>
+        </section>
+        <article class="main__text">
+            <h2>Простые действия</h2>
+            <div class="link-string">
+                <p>Связка локального репозитория с удалённым</p>
+                <code class="git-code">git remote add origin "url"</code>
+            </div>
+            <div class="link-string">
+                <p>Клонировать удалённый репозиторий</p>
+                <code class="git-code">git clone "url"</code>
+            </div>
+            <div class="link-string">
+                <p>Добавить файлы в коммит</p>
+                <code class="git-code">git add .</code>
+            </div>
+            <div class="link-string">
+                <p>Создать коммит с названием</p>
+                <code class="git-code">git commit -m "Добавил новую функцию"</code>
+            </div>
+            <div class="link-string">
+                <p>Отправить коммит на сервер</p>
+                <code class="git-code">git push</code>
+            </div>
+            <div class="link-string">
+                <p>Удалить последние коммиты</p>
+                <code class="git-code">git reset --hard HEAD~n</code>
+                <u>(Где n — количество последних коммитов)</u>
+            </div>
+            <div class="link-string">
+                <p>Добавить изменения в существующий коммит</p>
+                <code class="git-code">git commit --amend</code>
+            </div>
+
+            <h2>Ветки git</h2>
+            <div class="link-string">
+                <p>Создание другой ветки</p>
+                <code class="git-code">git checkout -b "branch-name"</code>
+            </div>
+            <div class="link-string">
+                <p>Переключение на ветку</p>
+                <code class="git-code">git checkout "branch-name"</code>
+            </div>
+            <div class="link-string">
+                <p>Слияние веток</p>
+                <code class="git-code">git merge --no-ff feature/add-login "branch-name"</code>
+                <u>(Создаёт отдельный merge-коммит. Сохраняет историю ветки.)</u>
+            </div>
+            
+            
+        </article>
+    </main>
+
+</body>
+
+</html>

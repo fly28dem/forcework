@@ -79,8 +79,8 @@ body {
 }
 
 .header__register-button{
-    width: 7%;
-    height: 70%;
+    width: 11vh;
+    height: 100%;
     background: url(./registerBtnInActive.png) no-repeat;
     background-position: center;
     background-size: 100%;
@@ -123,22 +123,22 @@ h1, h2, p {
     color: rgb(170, 170, 170);
 }
 
+/* Отступы */
+
 .main__header {
     margin-top: 5vh;
 }
 
 h1 {
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 
 h2 {
-    margin-top: 1vh;
+    margin-top: 2vh;
     margin-bottom: 1vh;
 }
 
-p, a {
-    margin-bottom: 1vh;
-}
+/* Ссылки */
 
 a {
     color: #E1AD00;
@@ -148,12 +148,18 @@ a:hover {
     color: #e7b91f;
 }
 
+/* Примечание */
+
 u {
-    color: rgb(77, 77, 77);;
+    color: rgb(78, 148, 87);
+    text-decoration: none;
 }
+
+/* Доступ к ресурсу */
 
 .blocked {
     color: rgb(148, 78, 78);
+    text-decoration: underline;
     
 }
 .blocked::after {
@@ -162,6 +168,7 @@ u {
 
 .works {
     color: rgb(78, 148, 87);
+    text-decoration: underline;
 }
 .works::after {
     content: '(Работает в РФ)';
@@ -170,6 +177,70 @@ u {
 /* Строка с ссылкой */
 
 .link-string {
-    display: flex;
+    width: 47vw;
+    /* border: 1px solid rgb(85, 85, 85); */
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    align-items: center;
     gap: 15px;
+    margin-bottom: 1vh;
+}
+
+@media (min-width: 3840px) {
+    .link-string {
+        width: 33vw;
+    }
+    .wrapper {
+        width: 70vw;
+    }
+    .container {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 1920px) {
+    .link-string {
+        width: 67vw;
+    }
+}
+
+@media (max-width: 1366px) {
+    .link-string {
+        width: 77vw;
+    }
+}
+
+@media (max-width: 720px) {
+    .link-string {
+        width: 93vw;
+        grid-template-columns: 5fr 1fr 5fr;
+    }
+    .blocked {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .works {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .blocked::after {
+        content: 'РФ✗';
+        
+    }
+    .works::after {
+        content: 'РФ✓';
+    }
+    a {
+        overflow-x: hidden;
+    }
+}
+
+/* Код */
+
+code {
+    padding: 1vh;
+    border-radius: 3px;
+    background-color: #181818;
+    /* color: #E5E5E5; */
+    color: #ceb45e;
 }
