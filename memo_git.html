@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Force Workshop — Memo Git</title>
-    <link rel="icon" href="./icon.png">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./imgs/favicon.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -14,7 +16,7 @@
     <header class="header">
         <div class="header__top-brick">
             <div class="top-brick wrapper">
-                <a href="./index.html" class="header__logotype"><img src="./logoMvp3.png" alt="logo"></a>
+                <a href="./index.html" class="header__logotype"><img src="./imgs/header-logo.png" alt="logo"></a>
                 <a href="./index.html" class="header__register-button"></a>
             </div>
         </div>
@@ -38,52 +40,66 @@
             <h2>Простые действия</h2>
             <div class="link-string">
                 <p>Связка локального репозитория с удалённым</p>
-                <code class="git-code">git remote add origin "url"</code>
+                <code class="git-code" id="code1">git remote add origin "url"<button class="copy_btn" data-target="code1"></button></code>
             </div>
             <div class="link-string">
                 <p>Клонировать удалённый репозиторий</p>
-                <code class="git-code">git clone "url"</code>
+                <code class="git-code" id="code2">git clone "url"<button class="copy_btn" data-target="code2"></button></code>
             </div>
             <div class="link-string">
                 <p>Добавить файлы в коммит</p>
-                <code class="git-code">git add .</code>
+                <code class="git-code" id="code3">git add .<button class="copy_btn" data-target="code3"></button></code>
             </div>
             <div class="link-string">
                 <p>Создать коммит с названием</p>
-                <code class="git-code">git commit -m "Добавил новую функцию"</code>
+                <code class="git-code" id="code4">git commit -m "Добавил новую функцию"<button class="copy_btn" data-target="code4"></button></code>
             </div>
             <div class="link-string">
                 <p>Отправить коммит на сервер</p>
-                <code class="git-code">git push</code>
+                <code class="git-code" id="code5">git push<button class="copy_btn" data-target="code5"></button></code>
             </div>
             <div class="link-string">
                 <p>Удалить последние коммиты</p>
-                <code class="git-code">git reset --hard HEAD~n</code>
+                <code class="git-code" id="code6">git reset --hard HEAD~n<button class="copy_btn" data-target="code6"></button></code>
                 <u>(Где n — количество последних коммитов)</u>
             </div>
             <div class="link-string">
                 <p>Добавить изменения в существующий коммит</p>
-                <code class="git-code">git commit --amend</code>
+                <code class="git-code" id="code7">git commit --amend<button class="copy_btn" data-target="code7"></button></code>
             </div>
 
             <h2>Ветки git</h2>
             <div class="link-string">
                 <p>Создание другой ветки</p>
-                <code class="git-code">git checkout -b "branch-name"</code>
+                <code class="git-code" id="code8">git checkout -b "branch-name"<button class="copy_btn" data-target="code8"></button></code>
             </div>
             <div class="link-string">
                 <p>Переключение на ветку</p>
-                <code class="git-code">git checkout "branch-name"</code>
+                <code class="git-code" id="code9">git checkout "branch-name"<button class="copy_btn" data-target="code9"></button></code>
             </div>
             <div class="link-string">
                 <p>Слияние веток</p>
-                <code class="git-code">git merge --no-ff feature/add-login "branch-name"</code>
+                <code class="git-code" id="code10">git merge --no-ff feature/add-login "branch-name" <button class="copy_btn" data-target="code10"></button></code>
                 <u>(Создаёт отдельный merge-коммит. Сохраняет историю ветки.)</u>
+            </div>
+
+            <h2>Полезно</h2>
+            <div class="link-string">
+                <p>Разрешить конфликт в пользу локальных файлов</p>
+                <code class="git-code" id="code11">git checkout --ours .<button class="copy_btn" data-target="code11"></button></code>
+            </div>
+            <div class="link-string">
+                <p>Отмена процесса слияния</p>
+                <code class="git-code" id="code12">git merge --abort<button class="copy_btn" data-target="code12"></button></code>
             </div>
             
             
         </article>
     </main>
+    
+    <footer>
+        
+    </footer>
 
 </body>
 
